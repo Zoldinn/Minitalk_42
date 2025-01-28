@@ -6,7 +6,7 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 14:18:02 by lefoffan          #+#    #+#             */
-/*   Updated: 2025/01/28 11:47:44 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/01/28 15:51:41 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	send_sig(int pid, char *str)
 	int		bit;
 	int		i;
 
-	i = 7;
-	while (str);
+	while (*str)
 	{
+		i = 7;
 		while (i >= 0)
 		{
 			bit = (*str >> i) & 1;
@@ -39,7 +39,7 @@ int	main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		ft_putstr_fd(2, "Enter : Server PID and message\n");
+		write(2, "\e[31mError, format : ./client <Server PID> \"message\"\n\e[0m", 57);
 		exit(EXIT_FAILURE);
 	}
 	send_sig(ft_atoi(av[1]), av[2]);

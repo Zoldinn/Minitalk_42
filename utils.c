@@ -6,7 +6,7 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:50:05 by lefoffan          #+#    #+#             */
-/*   Updated: 2025/01/27 17:47:06 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/01/28 13:47:25 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,4 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (res * sign);
-}
-
-int	ft_convert(int c)
-{
-	
 }
