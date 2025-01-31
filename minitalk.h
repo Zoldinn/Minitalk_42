@@ -6,7 +6,7 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 14:33:31 by lefoffan          #+#    #+#             */
-/*   Updated: 2025/01/28 15:14:27 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:42:09 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int	ft_atoi(const char *nptr);
+int		ft_atoi(const char *nptr);
+int		ft_strlen(char *str);
+char	*ft_addchar(char *str, char c);
+void	cleanup(char *str);
+void	set_sigaction(void (*handler)(int, siginfo_t*, void*), int sigusr);
 
 #endif
