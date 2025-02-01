@@ -45,7 +45,8 @@ void	send_sig(int pid, char *str)
 			}
 			--i;
 			while (!received_ack)
-				pause();
+			{
+			}
 			received_ack = 0;
 
 		}
@@ -56,7 +57,8 @@ void	send_sig(int pid, char *str)
 	{
 		kill(pid, SIGUSR2);
 		while (!received_ack)
-			pause();
+		{
+		}
 		received_ack = 0;
 	}
 }
