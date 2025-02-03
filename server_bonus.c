@@ -6,7 +6,7 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 14:17:53 by lefoffan          #+#    #+#             */
-/*   Updated: 2025/02/03 16:11:55 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/02/03 16:10:01 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	sig_handler(int signal, siginfo_t *info, void *context)
 			ft_printf("%s\n", g_str);
 			free(g_str);
 			g_str = NULL;
+			kill(info->si_pid, SIGUSR2);
 		}
 		else
 		{

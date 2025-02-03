@@ -6,7 +6,7 @@
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:50:05 by lefoffan          #+#    #+#             */
-/*   Updated: 2025/01/31 15:44:41 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/02/03 15:44:08 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,14 +72,14 @@ char	*ft_addchar(char *str, char c)
 	{
 		new = malloc(sizeof(char) * 2);
 		if (!new)
-			return (NULL);
+			return (write(2, "\e[31mFail\n\e[0m", 14), NULL);
 		new[0] = c;
 		new[1] = '\0';
 		return (new);
 	}
 	new = malloc(sizeof(char) * (ft_strlen(str) + 2));
 	if (!new)
-		return (NULL);
+		return (write(2, "\e[31mFail\n\e[0m", 14), NULL);
 	i = -1;
 	while (str[++i])
 		new[i] = str[i];

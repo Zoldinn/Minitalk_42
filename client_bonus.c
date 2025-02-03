@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lefoffan <lefoffan@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 14:18:02 by lefoffan          #+#    #+#             */
-/*   Updated: 2025/02/03 16:38:43 by lefoffan         ###   ########.fr       */
+/*   Updated: 2025/02/03 16:38:40 by lefoffan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ack_handler(int signum, siginfo_t *info, void *context)
 	(void) info;
 	if (signum == SIGUSR1)
 		g_received_ack = 1;
+	else if (signum == SIGUSR2)
+		ft_printf("finished\n");
 }
 
 void	wait_sig(void)
